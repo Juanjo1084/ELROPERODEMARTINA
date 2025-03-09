@@ -57,10 +57,16 @@
   
 
 @media(max-width:991px){
+  @media (max-width: 991px) {
     .filter-container {
         width: 90%;
         margin: 0;
         padding: 20px;
-        right: 0;
+        right: -100%; /* Mantiene oculto el filtro en móviles */
     }
+
+    .filter-container.show {
+        right: 0; /* Se muestra cuando se agrega la clase 'show' */
+    }
+}
 }
