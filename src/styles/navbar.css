@@ -1,0 +1,36 @@
+.navbar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-pastel-2);
+}
+
+.navbar h1 {
+    font-style: italic;
+}
+
+.buttons-navbar button{
+    color: var(--text-dark-1);
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    background: none;
+}
+
+.buttons-navbar button:hover {
+    cursor: pointer;
+    background-color: var(--bg-pastel-1);
+    transition: ease-in-out 500ms;
+}
+
+@media(max-width:991px) {
+    .navbar h1 {
+        display: none;
+    }
+
+    .navbar h2 {
+        font-size: 20px;
+    }
+}

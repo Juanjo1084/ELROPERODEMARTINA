@@ -1,0 +1,31 @@
+.filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--bg-pastel-3);
+}
+
+.filter button {
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.filter button:hover {
+    cursor: pointer;
+    background-color: var(--bg-pastel-1);
+    transition: ease-in-out 500ms;
+}
+
+.filter-pages {
+    display: flex;
+    gap: 20px;
+}
+
+@media(max-width:991px){
+    .filter-pages {
+        display: none;
+    }
+}

@@ -1,0 +1,9 @@
+.button-whats {
+    color: var(--text-dark-1);
+    font-size: 60px;
+    padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+
