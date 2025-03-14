@@ -4,6 +4,7 @@ import Header from './pages/header.jsx'
 import Footer from './pages/footer.jsx'
 import Products from './pages/products.jsx'
 import {products as initialProducts} from './data/products.json'
+import LandingPage from './pages/landingpage.jsx'
 
 function App() {
 const [products] = useState(initialProducts)
@@ -45,8 +46,10 @@ const handleFilterChange = (newFilters) => {
   }));
 };
 
+
   return (
     <>
+      <LandingPage />
     <div className='app'>
       <Header filters={filters} handleFilterChange={handleFilterChange}/>
       <Products products={filterProducts(products)} />
