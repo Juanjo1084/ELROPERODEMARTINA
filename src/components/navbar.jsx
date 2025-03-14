@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <>
         <div className='navbar'>
-            <h2>LOGO</h2>
+            <img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" />
             <h1>EL ROPERO DE MARTINA</h1>
             <div className="buttons-navbar">
                 <Search />

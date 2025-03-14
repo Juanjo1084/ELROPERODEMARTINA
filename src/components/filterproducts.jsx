@@ -50,9 +50,14 @@ const FilterProducts = ({ filters, handleFilterChange, showFilters, setShowFilte
         className="filter-select"
       >
         <option value="all">Todas</option>
+        <option value="XS">XS</option>
         <option value="S">S</option>
         <option value="4">4</option>
         <option value="6">6</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+        <option value="14">14</option>
         
       </select>
     </div>

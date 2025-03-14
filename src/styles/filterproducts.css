@@ -2,9 +2,9 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 33%;
+    width: 25%;
     height: 100vh;
-    background-color: var(--bg-pastel-5);
+    background-color: var(--bg-pastel-2);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: right 0.3s ease-in-out;

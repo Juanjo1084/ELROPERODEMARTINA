@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --bg-pastel-1: #ffebd2; /* Melocotón claro */
+  --bg-pastel-1: #b9ecfd; /* Melocotón claro */
   --bg-pastel-2: #d4f4ff; /* Azul cielo claro */
   --bg-pastel-3: #d9ffd9; /* Verde menta */
   --bg-pastel-4: #f9d9ff; /* Lila suave */
@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: var(--bg-pastel-1);
+  background-color: white;
   color: var(--text-dark-1);
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;

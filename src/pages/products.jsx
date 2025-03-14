@@ -6,7 +6,7 @@ export default function Products({products}){
         <>
         <main className="products">
             <ul>
-                {products.map((product)=>
+                {products.slice(0, 20).map((product)=>
                     <li key={product.id}>
                         <img src={product.image} alt="" />
                             <h3>{product.title}</h3>

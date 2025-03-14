@@ -11,11 +11,7 @@ const [showFilters, setShowFilters] = useState(false)
         <>
         <div className='filter'>
             <div className='filter-pages'>
-                <h3>All</h3>
-                <h3>Pantalones</h3>
-                <h3>Chaquetas</h3>
-                <h3>Bodys</h3>
-                <h3>Blusas</h3>
+                <h3>Vistete a tu propío estílo <i class="fa-solid fa-heart"></i></h3>
             </div>
             <button onClick={()=>setShowFilters(true)}><i class="fa-solid fa-filter"></i> Filtrar</button>
             <FilterProducts 

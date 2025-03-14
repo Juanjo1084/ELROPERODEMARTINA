@@ -3,11 +3,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-pastel-2);
+    background-color: var(--bg-pastel-1);
 }
 
 .navbar h1 {
     font-style: italic;
+}
+
+.navbar img {
+    width: 60px;
 }
 
 .buttons-navbar button{
