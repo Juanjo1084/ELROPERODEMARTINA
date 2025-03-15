@@ -44,7 +44,7 @@
   
 @media(max-width:991px) {
     .carousel-images {
-        width: 700px;
+        width: 350px;
         height: 300px;
     }
 }
