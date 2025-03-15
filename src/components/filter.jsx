@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../styles/filter.css'
 import FilterProducts from './filterproducts.jsx'
-import { useFilters } from '../context/filtercontext.jsx'
 
 export default function Filter(){
 const [showFilters, setShowFilters] = useState(false)
