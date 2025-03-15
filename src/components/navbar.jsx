@@ -10,7 +10,7 @@ const navigate = useNavigate();
     return (
         <>
         <div className='navbar'>
-            <button onClick={() => navigate("/home")}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
+            <button onClick={() => navigate("/")}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
             <h1>EL ROPERO DE MARTINA</h1>
             <div className="buttons-navbar">
                 <Search />

@@ -17,7 +17,7 @@ export default function Home() {
         <h2>¡Descubre nuestra colección y encuentra tu estilo ideal!</h2>
         <h2>Haz clic en el botón a continuación y explora todos nuestros productos.</h2>
     </div>
-        <button className="btn-products" onClick={() => navigate("/products")}>Vamos de Compras</button>
+        <button className="btn-products"  onClick={() => {window.scrollTo(0, 0); navigate("/products");}}>Vamos de Compras</button>
     </div>
   )
 }

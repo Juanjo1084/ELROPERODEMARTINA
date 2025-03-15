@@ -15,7 +15,7 @@ export default function Carousel() {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000); // Cambio automático cada 3s
+    const interval = setInterval(nextSlide, 3000); // Cambio automático cada 3s
     return () => clearInterval(interval); // Limpiar intervalo al desmontar
   }, []);
 

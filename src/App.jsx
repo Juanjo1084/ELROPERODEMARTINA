@@ -14,7 +14,7 @@ function App() {
       <LandingPage />
       <Header />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
       </Routes>
       <a className='button-whats' href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
