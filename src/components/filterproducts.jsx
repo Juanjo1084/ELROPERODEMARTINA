@@ -1,14 +1,17 @@
 import "../styles/filterproducts.css"; 
 import FilterType from './filtertype.jsx'
+import { useFilters } from '../context/filtercontext.jsx'
 
-const FilterProducts = ({ filters, handleFilterChange, showFilters, setShowFilters }) => {
+const FilterProducts = ({ showFilters, setShowFilters }) => {
+const {filters} = useFilters();
+const {handleFilterChange} = useFilters();
+
   return (
     <div className={`filter-container ${showFilters ? "show" : ""}`}>
       <button className="close-btn" onClick={() => setShowFilters(false)}>✖</button>
 
       <h2 className="filter-title">Filtrar Productos</h2>
 
-      {/* Ordenar por precio */}
       <label className="filter-label">Ordenar por precio:</label>
       <select
         value={filters.sortPrice}
@@ -20,29 +23,8 @@ const FilterProducts = ({ filters, handleFilterChange, showFilters, setShowFilte
         <option value="mayor">Mayor Precio</option>
       </select>
 
-      {/* Filtro por tipo de prenda */}
-      <label className="filter-label">Tipo de prenda:</label>
-      <div className="filter-checkbox-group">
-      <FilterType 
-        name = "camiseta"
-        filters = {filters} 
-        onFilterChange={handleFilterChange}
-        />
-      <FilterType 
-        name = "Jean"
-        filters = {filters} 
-        onFilterChange={handleFilterChange}
-        />
-      <FilterType 
-        name = "chaquetas"
-        filters = {filters} 
-        onFilterChange={handleFilterChange}
-        />  
-      </div>
 
-      
 
-      {/* Filtro por talla */}
       <label className="filter-label">Selecciona Talla:</label>
       <select
         value={filters.talla}
@@ -58,6 +40,7 @@ const FilterProducts = ({ filters, handleFilterChange, showFilters, setShowFilte
         <option value="10">10</option>
         <option value="12">12</option>
         <option value="14">14</option>
+        <option value="16">16</option>
         
       </select>
     </div>

@@ -22,6 +22,10 @@ const LandingPage = ({ onComplete }) => {
   return (
     <div className={`landing-container ${isVisible ? "" : "fade-out"}`}>
       <img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="Logo" className={logoClass} />
+      {/* <h1>Bienvenid@ 
+        <br />
+        EL ROPERO DE MARTINA
+      </h1> */}
     </div>
   );
 };

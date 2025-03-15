@@ -1,13 +1,10 @@
 import Navbar from '../components/navbar.jsx'
-import Filter from '../components/filter.jsx'
 import '../styles/header.css'
 
-export default function Header({filters, handleFilterChange}) {
+export default function Header() {
     return (
         <>
-        <Navbar />
-        <Filter filters = {filters} handleFilterChange={handleFilterChange} />
-        
+        <Navbar />        
         </>
     )
 }

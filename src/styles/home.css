@@ -1,0 +1,63 @@
+.home-main {
+    margin: 0 auto;
+    padding: 20px;  /* Se adapta según el tamaño de la pantalla */
+    display: flex;
+    width: 90%;  /* Ahora es dinámico en lugar de un valor fijo */
+    max-width: 1200px; /* Máximo 1200px, pero puede reducirse */
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home p {
+    font-size: 1.5rem; /* Se ajusta mejor en diferentes tamaños de pantalla */
+    text-align: justify;
+    max-width: 100%; /* Para evitar que el texto sea demasiado ancho */
+}
+
+
+.btn-products {
+    color: var(--text-dark-1);
+    font-size: 25px;
+    padding: 10px;
+    margin: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: var(--bg-pastel-1);
+    border: none;
+}
+
+.btn-products:hover {
+    background-color: var(--bg-pastel-3);
+    transition: ease-in-out 1s;
+    cursor: pointer;
+}
+
+@media(max-width:991px) {
+    .home p {
+        font-size: 20px;
+    }
+
+    .home h1 {
+        font-size: 20px;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .btn-products {
+        font-size: 20px;
+    }
+
+    .home-main {
+        width: 80%;
+    }
+}

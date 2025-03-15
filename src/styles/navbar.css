@@ -14,6 +14,12 @@
     width: 60px;
 }
 
+.navbar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .buttons-navbar button{
     color: var(--text-dark-1);
     font-size: 25px;
