@@ -16,34 +16,45 @@
     width: 100%;
     top: 50px;
     position: relative;
+    background-image: url(https://images.pexels.com/photos/843227/pexels-photo-843227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .home p {
     font-size: 1.5rem; /* Se ajusta mejor en diferentes tamaños de pantalla */
     text-align: justify;
     max-width: 100%;
-    color: white;
+    font-weight: 600;
+    /* backdrop-filter: blur(10px); */
+    /* color: white; */
+}
+
+.home h1 {
+    /* color: white; */
 }
 
 .home h2 {
-    color: white;
+    /* color: white; */
 }
 
 
 
 .btn-products {
-    color: var(--text-dark-1);
+    color: white;
     font-size: 25px;
     padding: 10px;
     margin: 20px;
     font-weight: 600;
     border-radius: 10px;
-    background-color: var(--bg-pastel-1);
+    background-color: rgba(0, 0, 0, 0.411);
+    backdrop-filter: blur(10px);
     border: none;
 }
 
 .btn-products:hover {
-    background-color: var(--bg-pastel-3);
+    background-color: var(--bg-pastel-4);
     transition: ease-in-out 1s;
     cursor: pointer;
 }

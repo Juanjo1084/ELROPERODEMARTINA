@@ -8,7 +8,7 @@ export default function Products() {
   const filteredProducts = filterProducts(initialProducts);
 
   return (
-    <>
+    <div className='products-main'>
     <Filter />
     <main className="products">
       {filteredProducts.length === 0 ? (
@@ -36,6 +36,6 @@ export default function Products() {
         </ul>
       )}
     </main>
-    </>
+    </div>
   );
 }

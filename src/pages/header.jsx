@@ -9,7 +9,6 @@ export default function Header() {
                 <p>Envío gratis a toso los destinos por compras mayores a 250.000$</p>
             </div>
             <Navbar />
-            {/* <Home />         */}
         </div>
     )
 }

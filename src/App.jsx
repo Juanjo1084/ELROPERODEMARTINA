@@ -15,8 +15,8 @@ function App() {
       <Header />
       <div className='app-main'>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
-            <Route path="/products" element={<Products />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </div>
       <a className='button-whats' href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
