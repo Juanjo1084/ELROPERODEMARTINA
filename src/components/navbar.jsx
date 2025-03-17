@@ -11,7 +11,7 @@ const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 1) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -31,8 +31,8 @@ const [isScrolled, setIsScrolled] = useState(false);
                 <button onClick={() => navigate("/")}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
                 <h1>EL ROPERO DE MARTINA</h1>
                 <div className="buttons-navbar">
-                    <Search />
-                    <Favorite />
+                    {/* <Search />
+                    <Favorite /> */}
                     <ShoppingCart />
                 </div>
             </div>
