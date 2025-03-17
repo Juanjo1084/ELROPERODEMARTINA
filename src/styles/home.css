@@ -14,13 +14,21 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    top: 50px;
+    position: relative;
 }
 
 .home p {
     font-size: 1.5rem; /* Se ajusta mejor en diferentes tamaños de pantalla */
     text-align: justify;
-    max-width: 100%; /* Para evitar que el texto sea demasiado ancho */
+    max-width: 100%;
+    color: white;
 }
+
+.home h2 {
+    color: white;
+}
+
 
 
 .btn-products {

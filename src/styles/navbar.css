@@ -1,17 +1,28 @@
 .navbar {
-    padding: 10px 20px;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-pastel-1);
+    background-color: var(--bg-pastel-2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 10;
+    transition: top 0.3s ease-in-out;
+    top: 38px;
+}
+
+.navbar.scrolled {
+    top: 0; 
 }
 
 .navbar h1 {
-    font-style: italic;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
 }
 
 .navbar img {
-    width: 60px;
+    width: 50px;
 }
 
 .navbar button {
@@ -21,8 +32,8 @@
 }
 
 .buttons-navbar button{
-    color: var(--text-dark-1);
-    font-size: 25px;
+    color: black;
+    font-size: 20px;
     border-radius: 5px;
     padding: 5px;
     border: none;
@@ -36,6 +47,10 @@
 }
 
 @media(max-width:991px) {
+    .navbar {
+        top: 33px;
+    }
+
     .navbar h1 {
         display: none;
     }

@@ -7,3 +7,9 @@
     z-index: 100;
 }
 
+.app-main {
+    background-image: url(https://i.postimg.cc/L5zzKsd5/tienda.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+}

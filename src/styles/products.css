@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
+    top: 40px;
 }
 
 .products ul {
@@ -25,6 +27,7 @@
     padding: 20px;
     border-radius: 5px;
     background-color: var(--bg-pastel-2);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     gap: 10px;
 }
@@ -78,6 +81,29 @@
 
 @media(max-width:991px) {
     .products ul {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .products img {
+        width: 150px;
+        height: 220px;
+    }
+    
+    .products li {
+        padding: 10px;
+        gap: 5px;
+    }
+    
+    .products h3 {
+        font-size: 12px;
+    }
+    
+    .products div {
+        font-size: 12px;
+        gap: 5px;
+    }
+    
+    .button-products button {
+        font-size: 18px;
+        padding: 0 20px;
     }
 }

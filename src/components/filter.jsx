@@ -8,9 +8,9 @@ const [showFilters, setShowFilters] = useState(false)
     return(
         <>
         <div className='filter'>
-            <div className='filter-pages'>
+            {/* <div className='filter-pages'>
                 <h3>Vistete a tu propío estílo <i class="fa-solid fa-heart"></i></h3>
-            </div>
+            </div> */}
             <button onClick={()=>setShowFilters(true)}><i class="fa-solid fa-filter"></i> Filtrar</button>
             <FilterProducts 
             showFilters={showFilters} 

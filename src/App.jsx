@@ -13,10 +13,12 @@ function App() {
     <div className='app'>
       <LandingPage />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-      </Routes>
+      <div className='app-main'>
+        <Routes>
+          {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/products" element={<Products />} />
+        </Routes>
+      </div>
       <a className='button-whats' href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
       <Footer />
     </div>
