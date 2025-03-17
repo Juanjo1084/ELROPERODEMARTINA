@@ -1,8 +1,6 @@
 .products-main {
-    background-image: url(https://i.postimg.cc/L5zzKsd5/tienda.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background: rgb(184,71,71);
+    background: linear-gradient(150deg, rgba(184,71,71,1) 8%, rgba(227,165,165,1) 51%, rgba(233,101,101,1) 92%);
 }
 
 .products {
@@ -10,9 +8,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     position: relative;
-    top: 40px;
+    top: 15px;
 }
 
 .products ul {
