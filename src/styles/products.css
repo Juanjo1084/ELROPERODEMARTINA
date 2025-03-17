@@ -1,6 +1,6 @@
 .products-main {
     background-image: url(https://i.postimg.cc/L5zzKsd5/tienda.jpg);
-    background-position: top;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -70,6 +70,14 @@
     flex-direction: column;
 }
 
+.no-products p {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    text-align: center;
+}
+
 .no-products img {
     width: 350px;
 }
@@ -112,5 +120,13 @@
     .button-products button {
         font-size: 18px;
         padding: 0 20px;
+    }
+
+    .no-products img {
+        width: 250px;
+    }
+
+    .products-main {
+        background-attachment: none;
     }
 }

@@ -15,7 +15,7 @@ export default function Products() {
         <div className="no-products">
             <p>No se encontraron productos con los filtros seleccionados.</p>
             <p>Por favor selecciona los filtros nuevamente. </p>
-            <img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="" />
+            <img src="https://i.postimg.cc/rpNjq7tY/logo-white.png" alt="" />
         </div>
       ) : (
         <ul>

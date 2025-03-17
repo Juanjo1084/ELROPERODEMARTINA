@@ -79,4 +79,9 @@
     .home-main {
         width: 80%;
     }
+
+    .home {
+        background-attachment: scroll;
+        background-size: cover;
+    }
 }
