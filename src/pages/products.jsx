@@ -2,7 +2,7 @@ import '../styles/products.css';
 import { useFilters } from '../context/filtercontext.jsx';
 import { products as initialProducts } from '../data/products.json';
 import Filter from '../components/filter.jsx';
-import { useCart } from '../context/CartContext.jsx';
+import { useCart } from '../context/cartcontext.jsx';
 
 export default function Products() {
   const { filterProducts } = useFilters();
