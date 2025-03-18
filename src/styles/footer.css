@@ -8,13 +8,19 @@
     position: block;
     text-align: center;
     bottom: 0;
-    background-color: var(--bg-pastel-1);
+    background-color: var(--text-dark-1);
 }
 
 .footer-networks a{
-    color: var(--text-dark-3);
+    color: white;
     padding: 0 15px;
     font-size: 30px;
+}
+
+.footer h3,
+.footer p,
+.footer h2 {
+    color: white;
 }
 
 .footer-info {
@@ -24,7 +30,7 @@
 
 .footer-line {
     width: 100%;
-    border: 1px solid var(--text-dark-2);
+    border: 1px solid white;
 }
 
 .footer-conditions {

@@ -1,6 +1,6 @@
 .home-main {
     margin: 0 auto;
-    padding: 20px;  /* Se adapta según el tamaño de la pantalla */
+    padding: 20px 20px 100px 20px;  /* Se adapta según el tamaño de la pantalla */
     display: flex;
     width: 90%;  /* Ahora es dinámico en lugar de un valor fijo */
     max-width: 1200px; /* Máximo 1200px, pero puede reducirse */
@@ -16,30 +16,28 @@
     width: 100%;
     top: 50px;
     position: relative;
-    /* background-image: url(https://images.pexels.com/photos/843227/pexels-photo-843227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover; */
 }
 
 .home p {
-    font-size: 1.5rem; /* Se ajusta mejor en diferentes tamaños de pantalla */
-    text-align: justify;
+    font-size: 20px;
+    text-align: center;
     max-width: 100%;
     font-weight: 600;
-    /* backdrop-filter: blur(10px); */
-    /* color: white; */
 }
 
 .home h1 {
-    /* color: white; */
+    text-align: center;
 }
 
 .home h2 {
-    /* color: white; */
+    text-align: center;
 }
 
-
+.home-products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
 .btn-products {
     color: white;

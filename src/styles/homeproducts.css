@@ -1,0 +1,16 @@
+.homeproducts-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeproducts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.homeproducts img {
+    width: 250px;
+}
