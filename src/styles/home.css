@@ -16,10 +16,10 @@
     width: 100%;
     top: 50px;
     position: relative;
-    background-image: url(https://images.pexels.com/photos/843227/pexels-photo-843227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /* background-image: url(https://images.pexels.com/photos/843227/pexels-photo-843227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .home p {

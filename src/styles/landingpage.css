@@ -20,13 +20,20 @@
     position: absolute;
     transition: all 2s ease-in-out;
   }
+
+  .title {
+    position: absolute;
+    top: 650px;
+  }
   
-  /* Activando animación con keyframes */
+  .move-title{
+    animation: moveTitle 2s ease-in-out forwards;
+  }
+
   .move-logo {
     animation: moveToNavbar 2s ease-in-out forwards;
   }
   
-  /* Animación del logo hasta el navbar */
   @keyframes moveToNavbar {
     0% {
       top: 50%;
@@ -35,10 +42,43 @@
       width: 500px;
     }
     100% {
-      top: 38px; /* Ajusta según la posición del navbar */
-      left: 0px; /* Ajusta según la posición del navbar */
+      top: 38px; 
+      left: 0px; 
       transform: translate(0, 0);
-      width: 50px; /* Tamaño final del logo */
+      width: 50px; 
     }
   }
+
+  @keyframes moveTitle {
+    0% {
+      transform: translate(0, -50%);
+    }
+    100% {
+      margin-left: 12px;
+      top: 53px; 
+      transform: translate(0, 0);
+      font-size: 20px; 
+      font-weight: 200;
+    }
+  }
+
+@media(max-width:1370px){
+  .title {
+    top: 520px;
+  }
+}
   
+@media(max-width:991px){
+  @keyframes moveTitle {
+    0% {
+      transform: translate(0, -50%);
+    }
+    100% {
+      margin-left: 12px;
+      top: -20px; 
+      transform: translate(0, 0);
+      font-size: 20px; 
+      font-weight: 200;
+    }
+  }
+}

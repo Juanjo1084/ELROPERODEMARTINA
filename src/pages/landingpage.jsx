@@ -4,6 +4,7 @@ import "../styles/landingpage.css";
 const LandingPage = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [logoClass, setLogoClass] = useState("logo");
+  const [titles, setTitles] = useState("title");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -11,9 +12,9 @@ const LandingPage = ({ onComplete }) => {
       if (onComplete) onComplete(); // Llamar función cuando desaparezca
     }, 5000);
 
-    // Activar animación del logo
     setTimeout(() => {
       setLogoClass("logo move-logo");
+      setTitles("title move-title");
     }, 3000);
 
     return () => clearTimeout(timeout);
@@ -22,10 +23,9 @@ const LandingPage = ({ onComplete }) => {
   return (
     <div className={`landing-container ${isVisible ? "" : "fade-out"}`}>
       <img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="Logo" className={logoClass} />
-      {/* <h1>Bienvenid@ 
-        <br />
+      <h1 className={titles} alt="title">
         EL ROPERO DE MARTINA
-      </h1> */}
+      </h1>
     </div>
   );
 };
