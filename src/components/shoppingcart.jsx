@@ -3,7 +3,7 @@ import "../styles/shoppingcart.css";
 import { useCart } from "../context/CartContext.jsx";
 
 export default function ShoppingCart() {
-    const { cart } = useCart();
+    const { cart, removeFromCart } = useCart(); // Función para eliminar productos
     const [isOpen, setIsOpen] = useState(false); // Estado para abrir/cerrar el carrito
 
     return (
@@ -21,14 +21,18 @@ export default function ShoppingCart() {
                     <p className="empty-cart">Tu carrito está vacío.</p>
                 ) : (
                     <ul>
-                        {cart.map((item, index) => (
-                            <li key={index} className="cart-item">
+                        {cart.map((item) => (
+                            <li key={item.id} className="cart-item">
                                 <img src={item.image} alt={item.title} />
                                 <div className="cart-item-info">
                                     <h3>{item.title}</h3>
                                     <p>Precio: ${item.price}</p>
                                     <p>Talla: {item.talla}</p>
                                 </div>
+                                {/* Botón para eliminar el producto */}
+                                <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+                                    <i className="fa-solid fa-trash"></i>
+                                </button>
                             </li>
                         ))}
                     </ul>
@@ -37,4 +41,5 @@ export default function ShoppingCart() {
         </div>
     );
 }
+
 

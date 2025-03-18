@@ -2,11 +2,11 @@ import '../styles/products.css';
 import { useFilters } from '../context/filtercontext.jsx';
 import { products as initialProducts } from '../data/products.json';
 import Filter from '../components/filter.jsx';
-import { useCart } from '../context/CartContext.jsx'; // Importamos el contexto del carrito
+import { useCart } from '../context/CartContext.jsx';
 
 export default function Products() {
   const { filterProducts } = useFilters();
-  const { addToCart } = useCart(); // Usamos la función para agregar productos al carrito
+  const { cart, addToCart } = useCart(); // Traemos el carrito y la función para agregar productos
   const filteredProducts = filterProducts(initialProducts);
 
   return (
@@ -16,31 +16,40 @@ export default function Products() {
         {filteredProducts.length === 0 ? (
           <div className="no-products">
             <p>No se encontraron productos con los filtros seleccionados.</p>
-            <p>Por favor selecciona los filtros nuevamente. </p>
+            <p>Por favor selecciona los filtros nuevamente.</p>
             <img src="https://i.postimg.cc/rpNjq7tY/logo-white.png" alt="No products" />
           </div>
         ) : (
           <ul>
-            {filteredProducts.slice(0, 20).map((product) => (
-              <li key={product.id}>
-                <img src={product.image} alt={product.title} />
-                <h3>{product.title}</h3>
-                <div>
-                  <p>Precio: ${product.price}</p>
-                  <p>Talla: {product.talla}</p>
-                </div>
-                <div className="button-products">
-                  {/* Botón de añadir al carrito */}
-                  <button onClick={() => addToCart(product)}>
-                    <i className="fa-solid fa-bag-shopping"></i>
-                  </button>
-                </div>
-              </li>
-            ))}
+            {filteredProducts.slice(0, 20).map((product) => {
+              const isInCart = cart.some(item => item.id === product.id); // Verificamos si ya está en el carrito
+
+              return (
+                <li key={product.id}>
+                  <img src={product.image} alt={product.title} />
+                  <h3>{product.title}</h3>
+                  <div>
+                    <p>Precio: ${product.price}</p>
+                    <p>Talla: {product.talla}</p>
+                  </div>
+                  <div className="button-products">
+                    {/* Si el producto ya está en el carrito, deshabilitar el botón */}
+                    <button 
+                      onClick={() => addToCart(product)} 
+                      disabled={isInCart}
+                      className={isInCart ? 'disabled-btn' : ''}
+                    >
+                      <i className="fa-solid fa-bag-shopping"></i>
+                    </button>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         )}
       </main>
     </div>
   );
 }
+
 

@@ -1,14 +1,10 @@
 .header {
-    /* background-image: url(https://i.postimg.cc/xCXR7YTN/fondo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     height: auto;
     top: 0;
 }
 
 .header-01 {
-    background-color: var(--bg-pastel-1);
+    background-color: var(--text-dark-1);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -17,7 +13,7 @@
 }
 
 .header-01 p {
-    color: black;
+    color: white;
 }
 
 @media(max-width:991px) {
