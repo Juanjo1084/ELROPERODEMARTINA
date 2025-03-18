@@ -69,13 +69,18 @@
 }
   
 @media(max-width:991px){
+
+  .title {
+    top: 620px;
+  }
+
   @keyframes moveTitle {
     0% {
       transform: translate(0, -50%);
     }
     100% {
       margin-left: 12px;
-      top: -20px; 
+      top: -100px; 
       transform: translate(0, 0);
       font-size: 20px; 
       font-weight: 200;
