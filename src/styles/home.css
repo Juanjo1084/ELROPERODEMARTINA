@@ -81,4 +81,8 @@
     .home {
         background-attachment: none;
     }
+
+    .home-products {
+        flex-direction: column;
+    }
 }

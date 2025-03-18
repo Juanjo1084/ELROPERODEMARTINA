@@ -1,9 +1,3 @@
-.homeproducts-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .homeproducts {
     display: flex;
     flex-direction: column;
@@ -13,4 +7,10 @@
 
 .homeproducts img {
     width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homeproducts img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
