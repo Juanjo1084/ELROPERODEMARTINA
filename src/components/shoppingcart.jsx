@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/shoppingcart.css";
-import { useCart } from "../context/CartContext.jsx";
+import { useCart } from "../context/cartcontext.jsx";
 
 export default function ShoppingCart() {
     const { cart, removeFromCart } = useCart(); // Función para eliminar productos
