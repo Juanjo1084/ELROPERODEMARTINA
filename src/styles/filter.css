@@ -4,6 +4,7 @@
     padding: 10px 20px;
     top: 47px;
     position: relative;
+    opacity: 0;
 }
 
 .filter button {
@@ -27,6 +28,10 @@
 }
 
 @media(max-width:991px){
+    .filter {
+        opacity: 1;
+    }
+    
     .filter-pages {
         display: none;
     }
