@@ -1,9 +1,37 @@
+.home-header {
+    background-image: url(https://img-cdn.pixlr.com/image-generator/history/67db1ae56c1b16c542bb8bbe/3261c961-7f83-40d7-8a4f-438d42ff37e2/preview.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-header-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.home-header-text h1 {
+    margin-top: 70px;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.home-header-text h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+
 .home-main {
     margin: 0 auto;
-    padding: 20px 20px 100px 20px;  /* Se adapta según el tamaño de la pantalla */
+    padding: 20px 20px 100px 20px;  
     display: flex;
-    width: 90%;  /* Ahora es dinámico en lugar de un valor fijo */
-    max-width: 1200px; /* Máximo 1200px, pero puede reducirse */
+    width: 90%; 
+    max-width: 1200px; 
     flex-direction: column;
     gap: 30px;
     flex-grow: 1;
@@ -57,7 +85,53 @@
     cursor: pointer;
 }
 
+.general {
+    display: flex;
+}
+
+.general-1 {
+    width: 50%;
+    padding: 50px 0;
+}
+
+.general-1 h2 {
+    text-align: center;
+}
+
+.general-1 p {
+    padding: 20px 70px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.general-2 {
+    background-image: url(https://img-cdn.pixlr.com/image-generator/history/67db1ae56c1b16c542bb8bbe/5d445798-f3a7-4a29-b657-37eb29673e57/preview.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.general-3 {
+    background-image: url(https://img-cdn.pixlr.com/image-generator/history/67db1e8a6c1b16c542bc1135/8f4347c0-74fe-46ab-8438-ff68ca2e52a4/preview.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
 @media(max-width:991px) {
+    .home-header-text h1 {
+        margin-top: 70px;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    
+    .home-header-text h2{
+        font-size: 20px;
+        font-weight: 800;
+    }
+
     .home p {
         font-size: 20px;
     }
@@ -85,4 +159,28 @@
     .home-products {
         flex-direction: column;
     }
+
+    .general {
+        flex-direction: column;
+    }
+
+    .general-1 {
+        width: 100%;
+    }
+
+    .general-1 p {
+        padding: 20px;
+    }
+
+    .general-2,
+    .general-3 {
+        width: 100%;
+        height: 350px;
+    }
+
+    .general:nth-child(1) .general-1 { order: 2; }
+    .general:nth-child(2) .general-2 { order: 1; }
+
+    .general:nth-child(3) .general-3 { order: 2; }
+    .general:nth-child(4) .general-1 { order: 1; }
 }
