@@ -3,10 +3,11 @@ import { useFilters } from '../context/filtercontext.jsx';
 import { products as initialProducts } from '../data/products.json';
 import Filter from '../components/filter.jsx';
 import { useCart } from '../context/cartcontext.jsx';
+import { Link } from 'react-router-dom'; // Importar Link para navegación
 
 export default function Products() {
   const { filterProducts } = useFilters();
-  const { cart, addToCart } = useCart(); // Traemos el carrito y la función para agregar productos
+  const { cart, addToCart } = useCart();
   const filteredProducts = filterProducts(initialProducts);
 
   return (
@@ -22,18 +23,20 @@ export default function Products() {
         ) : (
           <ul>
             {filteredProducts.slice(0, 20).map((product) => {
-              const isInCart = cart.some(item => item.id === product.id); // Verificamos si ya está en el carrito
+              const isInCart = cart.some(item => item.id === product.id);
 
               return (
                 <li key={product.id}>
                   <img src={product.image} alt={product.title} />
+                  <Link to={`/details/${product.id}`} className="details-button">
+                      Detalles
+                  </Link>
                   <h3>{product.title}</h3>
                   <div>
                     <p>Precio: ${product.price}</p>
                     <p>Talla: {product.talla}</p>
                   </div>
                   <div className="button-products">
-                    {/* Si el producto ya está en el carrito, deshabilitar el botón */}
                     <button 
                       onClick={() => addToCart(product)} 
                       disabled={isInCart}
@@ -51,5 +54,3 @@ export default function Products() {
     </div>
   );
 }
-
-

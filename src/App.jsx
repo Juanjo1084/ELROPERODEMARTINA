@@ -4,6 +4,7 @@ import Header from './pages/header.jsx'
 import Footer from './pages/footer.jsx'
 import Products from './pages/products.jsx'
 import LandingPage from './pages/landingpage.jsx'
+import Details from './components/details.jsx'
 import Home from './pages/home.jsx'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path='/details/:id' element={<Details />} />
         </Routes>
       </div>
       <a className='button-whats' href="#"><i class="fa-brands fa-square-whatsapp"></i></a>

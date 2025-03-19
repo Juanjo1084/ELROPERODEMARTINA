@@ -3,8 +3,8 @@ import "../styles/shoppingcart.css";
 import { useCart } from "../context/cartcontext.jsx";
 
 export default function ShoppingCart() {
-    const { cart, removeFromCart } = useCart(); // Función para eliminar productos
-    const [isOpen, setIsOpen] = useState(false); // Estado para abrir/cerrar el carrito
+    const { cart, removeFromCart } = useCart();
+    const [isOpen, setIsOpen] = useState(false); 
 
     return (
         <div className="shopping-cart-container">
