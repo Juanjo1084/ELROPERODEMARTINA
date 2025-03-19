@@ -1,4 +1,3 @@
-// src/context/FilterContext.jsx
 import { createContext, useState, useContext } from "react";
 
 export const FilterContext = createContext();
@@ -9,6 +8,7 @@ export const FilterProvider = ({ children }) => {
     type: "all",
     talla: "all",
     sortPrice: "normal",
+    category: "all", // Nuevo filtro de categoría
   });
 
   const filterProducts = (products) => {
@@ -20,7 +20,11 @@ export const FilterProvider = ({ children }) => {
         product.talla === filters.talla ||
         Number(product.talla) === Number(filters.talla);
 
-      return matchesPrice && matchesType && matchesTalla;
+      // Filtrar por categoría (coincidencia exacta con mayúscula inicial y "s" al final)
+      const matchesCategory =
+        filters.category === "all" || product.type === filters.category;
+
+      return matchesPrice && matchesType && matchesTalla && matchesCategory;
     });
 
     if (filters.sortPrice !== "normal") {

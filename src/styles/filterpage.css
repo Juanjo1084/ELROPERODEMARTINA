@@ -19,6 +19,15 @@
     gap: 10px;
 }
 
+.filter-buttons-price,
+.filter-buttons-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.filter-buttons-price button,
+.filter-buttons-category button,
 .filter-buttons button {
     padding: 5px 10px;
     background-color: white;
@@ -27,7 +36,18 @@
     transition: ease-in-out 0.3s;
 }
 
+.filter-buttons-price button:hover,
+.filter-buttons-category button:hover,
 .filter-buttons button:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.filter-buttons-price button.active,
+.filter-buttons-category button.active,
+.filter-buttons button.active {
+    background-color: black;
+    color: white;
+    border-color: black;
+    transform: scale(1);
 }

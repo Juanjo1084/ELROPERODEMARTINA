@@ -23,6 +23,19 @@ const {handleFilterChange} = useFilters();
         <option value="mayor">Mayor Precio</option>
       </select>
 
+      <label className="filter-label">Ordenar por categoría:</label>
+      <select
+      className="filter-select"
+      value={filters.category}
+      onChange={(e) => handleFilterChange({ category: e.target.value })}
+      >
+      <option value="all">Todas</option>
+      <option value="Jeans">Jeans</option>
+      <option value="Shirts">Shirts</option>
+      <option value="Dresses">Dresses</option>
+      <option value="Jackets">Jackets</option>
+       </select>
+
 
 
       <label className="filter-label">Selecciona Talla:</label>

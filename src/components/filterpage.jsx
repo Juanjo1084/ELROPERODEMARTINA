@@ -9,35 +9,52 @@ const {handleFilterChange} = useFilters();
     <div className="page-container">
         <h2 className="page-title">Filtrar Productos</h2>
         <label className="page-label">Ordenar por precio:</label>
-        <div className="filter-checkboxes">
-        {[
-            { value: "normal", label: "Normal" },
-            { value: "menor", label: "Menor Precio" },
-            { value: "mayor", label: "Mayor Precio" },
-        ].map((option) => (
-        <label key={option.value} className="checkbox-label">
-            <input
-                type="checkbox"
-                checked={filters.sortPrice === option.value}
-                onChange={() => handleFilterChange({ sortPrice: option.value })}
-            />
-            {option.label}
-        </label>
-        ))}
-        </div>
+<div className="filter-buttons-price">
+  {[
+    { value: "normal", label: "Normal" },
+    { value: "menor", label: "Menor Precio" },
+    { value: "mayor", label: "Mayor Precio" },
+  ].map((option) => (
+    <button
+      key={option.value}
+      className={`filter-btn ${filters.sortPrice === option.value ? "active" : ""}`}
+      onClick={() => handleFilterChange({ sortPrice: option.value })}
+    >
+      {option.label}
+    </button>
+  ))}
+</div>
 
-        <label className="page-label">Selecciona Talla:</label>
-        <div className="filter-buttons">
-        {["all", "XS", "S", "4", "6", "8", "10", "12", "14", "16"].map((size) => (
-        <button
-            key={size}
-            onClick={() => handleFilterChange({ talla: size })}
-            className={`filter-btn ${filters.talla === size ? "active" : ""}`}
-        >
-            {size === "all" ? "Todas" : size}
-        </button>
-        ))}
-        </div>
+
+<label className="page-label">Ordenar por categoría:</label>
+<div className="filter-category">
+  <div className="filter-buttons-category">
+    {["all", "Jeans", "Shirts", "Dresses", "Jackets"].map((category) => (
+      <button
+        key={category}
+        className={`filter-btn-category ${filters.category === category ? "active" : ""}`}
+        onClick={() => handleFilterChange({ category })}
+      >
+        {category === "all" ? "Todas" : category}
+      </button>
+    ))}
+  </div>
+</div>
+
+
+<label className="page-label">Selecciona Talla:</label>
+<div className="filter-buttons">
+  {["all", "XS", "S", "4", "6", "8", "10", "12", "14", "16"].map((size) => (
+    <button
+      key={size}
+      onClick={() => handleFilterChange({ talla: size })}
+      className={`filter-btn ${filters.talla === size ? "active" : ""}`}
+    >
+      {size === "all" ? "Todas" : size}
+    </button>
+  ))}
+</div>
+
 
     </div>
   );
