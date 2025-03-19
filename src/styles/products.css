@@ -119,6 +119,13 @@
     border: none;
     background: none;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.button-products button:hover {
+    transform: scale(1.05);
+    color: red;
+    transition: ease-in-out 0.3s;
 }
 
 .no-products {

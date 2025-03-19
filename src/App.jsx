@@ -6,6 +6,7 @@ import Products from './pages/products.jsx'
 import LandingPage from './pages/landingpage.jsx'
 import Details from './components/details.jsx'
 import Home from './pages/home.jsx'
+import Checkout from './components/checkout.jsx';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path='/details/:id' element={<Details />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
       <a className='button-whats' href="#"><i class="fa-brands fa-square-whatsapp"></i></a>

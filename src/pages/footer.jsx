@@ -34,6 +34,7 @@ export default function Footer(){
                     <p>POLÍTICA DE PRIVACIDAD</p>
                     <p>SUPERINTENDENCIA</p>
                 </div>
+                <p>©ELROPERODEMARTINA | Todos los derechos reservados</p>
             </div>
         </div>
     )
