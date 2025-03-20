@@ -3,17 +3,17 @@ import "../styles/carousel.css";
 import HomeProducts from "./homeproducts.jsx";
 
 const products = [
-  { title: "Jeans", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4100732-483-725?v=638667348051500000&width=483&height=725&aspect=true" },
-  { title: "Gabanes", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4247616-483-725?v=638744269622130000&width=483&height=725&aspect=true" },
-  { title: "Blusas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3728407-483-725?v=638531704850170000&width=483&height=725&aspect=true" },
-  { title: "Chaquetas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
-  { title: "Ropa Interior", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4100732-483-725?v=638667348051500000&width=483&height=725&aspect=true" },
-  { title: "Blazers", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4247616-483-725?v=638744269622130000&width=483&height=725&aspect=true" },
-  { title: "Vestidos", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3728407-483-725?v=638531704850170000&width=483&height=725&aspect=true" },
-  { title: "Zapatillas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
-  { title: "Gabardinas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
-  { title: "Busos", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
-  { title: "Conjuntos", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
+  { title: "Jeans", img: "https://i.postimg.cc/RZm9hDHy/jean.jpg" },
+  { title: "Gabanes", img: "https://i.postimg.cc/xjk94HQx/final-1.jpg" },
+  { title: "Blusas", img: "https://i.postimg.cc/pyNG03vH/final.jpg" },
+  { title: "Chaquetas", img: "https://i.postimg.cc/SQwmFsNy/jacket.jpg" },
+  { title: "Ropa Interior", img: "https://i.postimg.cc/HLsg483t/ropa-interior.jpg" },
+  { title: "Blazers", img: "https://i.postimg.cc/2yL97rPG/blazer.jpg" },
+  { title: "Vestidos", img: "https://i.postimg.cc/0Qz1hgTM/vestido.jpg" },
+  { title: "Zapatillas", img: "https://i.postimg.cc/63FxXjKH/zapatillas.jpg" },
+  { title: "Gabardinas", img: "https://i.postimg.cc/15ws9QfD/gabardinas.jpg" },
+  { title: "Busos", img: "https://i.postimg.cc/MpYwQm0T/ropa-deportiva.jpg" },
+  { title: "Conjuntos", img: "https://i.postimg.cc/mrXGdZ5W/final-2.jpg" },
 ];
 
 const Carousel = () => {
