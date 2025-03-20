@@ -1,9 +1,9 @@
 .home-header {
-    background-image: url(https://img-cdn.pixlr.com/image-generator/history/67db1ae56c1b16c542bb8bbe/3261c961-7f83-40d7-8a4f-438d42ff37e2/preview.webp);
+    /* background-image: url(https://img-cdn.pixlr.com/image-generator/history/67db1ae56c1b16c542bb8bbe/3261c961-7f83-40d7-8a4f-438d42ff37e2/preview.webp); */
+    background-image: url(https://files.oaiusercontent.com/file-5ACqojiJ8Xh2P5S968nGeN?se=2025-03-20T15%3A14%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7e606177-2ee4-4ba7-863c-7a1edecc1cfe.webp&sig=qItAJbnJY79wIFeP%2B0v5eGDiIhhp37c7bfkL%2BkvEeDw%3D);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1000px;
+    background-size: contain;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -19,11 +19,13 @@
     margin-top: 70px;
     font-size: 70px;
     font-weight: 900;
+    color: white;
 }
 
 .home-header-text h2{
     font-size: 50px;
     font-weight: 800;
+    color: white;
 }
 
 .home-main {
@@ -68,7 +70,7 @@
 }
 
 .btn-products {
-    color: white;
+    color: var(--text-dark-1);
     font-size: 25px;
     padding: 10px;
     margin: 20px;
@@ -77,11 +79,13 @@
     background-color: rgba(0, 0, 0, 0.411);
     backdrop-filter: blur(10px);
     border: none;
+    transition: ease-in-out 0.3s;
 }
 
 .btn-products:hover {
-    background-color: var(--bg-pastel-4);
-    transition: ease-in-out 1s;
+    transform: scale(1.05);
+    background-color: var(--text-dark-2);
+    color: white;
     cursor: pointer;
 }
 
@@ -92,6 +96,10 @@
 .general-1 {
     width: 50%;
     padding: 50px 0;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .general-1 h2 {
@@ -99,7 +107,7 @@
 }
 
 .general-1 p {
-    padding: 20px 70px;
+    padding: 20px 150px;
     text-align: justify;
     line-height: 1.5;
     font-size: 18px;
@@ -130,6 +138,12 @@
     .home-header-text h2{
         font-size: 20px;
         font-weight: 800;
+    }
+
+    .home-header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
     }
 
     .home p {
@@ -166,6 +180,7 @@
 
     .general-1 {
         width: 100%;
+        height: auto;
     }
 
     .general-1 p {

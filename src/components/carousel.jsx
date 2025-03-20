@@ -1,36 +1,35 @@
-import { useState, useEffect } from "react";
-import "../styles/carousel.css"; 
+import React from "react";
+import "../styles/carousel.css";
+import HomeProducts from "./homeproducts.jsx";
 
-const images = [
-  "https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg",
-  "https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-elegante-mujer-joven.jpg",
-  "https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-mujer-original-y-elegante.jpg"
+const products = [
+  { title: "Jeans", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4100732-483-725?v=638667348051500000&width=483&height=725&aspect=true" },
+  { title: "Gabanes", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4247616-483-725?v=638744269622130000&width=483&height=725&aspect=true" },
+  { title: "Blusas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3728407-483-725?v=638531704850170000&width=483&height=725&aspect=true" },
+  { title: "Chaquetas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
+  { title: "Ropa Interior", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4100732-483-725?v=638667348051500000&width=483&height=725&aspect=true" },
+  { title: "Blazers", img: "https://hmcolombia.vtexassets.com/arquivos/ids/4247616-483-725?v=638744269622130000&width=483&height=725&aspect=true" },
+  { title: "Vestidos", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3728407-483-725?v=638531704850170000&width=483&height=725&aspect=true" },
+  { title: "Zapatillas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
+  { title: "Gabardinas", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
+  { title: "Busos", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
+  { title: "Conjuntos", img: "https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" },
 ];
 
-export default function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000); // Cambio automático cada 3s
-    return () => clearInterval(interval); // Limpiar intervalo al desmontar
-  }, []);
-
+const Carousel = () => {
   return (
-    <div className="carousel">
-      <div className="carousel-images">
-        {images.map((img, index) => (
-          <img
+    <div className="carousel-container">
+      <div className="carousel-track">
+        {[...products, ...products].map((product, index) => (
+          <HomeProducts
             key={index}
-            src={img}
-            alt={`Slide ${index + 1}`}
-            className={index === currentIndex ? "active" : ""}
+            productTitle={product.title}
+            productImage={product.img}
           />
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default Carousel;

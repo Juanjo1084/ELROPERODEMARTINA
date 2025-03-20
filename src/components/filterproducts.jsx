@@ -29,12 +29,12 @@ const {handleFilterChange} = useFilters();
       value={filters.category}
       onChange={(e) => handleFilterChange({ category: e.target.value })}
       >
-      <option value="all">Todas</option>
-      <option value="Jeans">Jeans</option>
-      <option value="Shirts">Shirts</option>
-      <option value="Dresses">Dresses</option>
-      <option value="Jackets">Jackets</option>
-       </select>
+        <option value="all">Todas</option>
+        <option value="Jeans">Jeans</option>
+        <option value="Shirts">Shirts</option>
+        <option value="Dresses">Dresses</option>
+        <option value="Jackets">Jackets</option>
+      </select>
 
 
 

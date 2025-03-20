@@ -43,17 +43,27 @@ const {handleFilterChange} = useFilters();
 
 
 <label className="page-label">Selecciona Talla:</label>
+<div className="filter-buttons-category">
+  <button
+    key="all"
+    onClick={() => handleFilterChange({ talla: "all" })}
+    className={`filter-btn ${filters.talla === "all" ? "active" : ""}`}
+  >
+    Todas
+  </button>
+</div>
 <div className="filter-buttons">
-  {["all", "XS", "S", "4", "6", "8", "10", "12", "14", "16"].map((size) => (
+  {["XS", "S", "4", "6", "8", "10", "12", "14", "16", "18"].map((size) => (
     <button
       key={size}
       onClick={() => handleFilterChange({ talla: size })}
       className={`filter-btn ${filters.talla === size ? "active" : ""}`}
     >
-      {size === "all" ? "Todas" : size}
+      {size}
     </button>
   ))}
 </div>
+
 
 
     </div>

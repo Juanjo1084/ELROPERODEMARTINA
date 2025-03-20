@@ -30,7 +30,7 @@ const [isOpen, setIsOpen] = useState(true);
                     <p>Descripción: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus saepe tempore repellat ab ipsam. Modi labore doloribus iure eum aut alias quidem eaque delectus nobis. Natus recusandae aut minus dolorum.</p>
                     <div className="details-price">
                         <p>Precio:</p>
-                        <h3>{product.price} $</h3>
+                        <h3>${product.price}</h3>
                         <h3>COP</h3>
                     </div>
                     <div className="details-talla">

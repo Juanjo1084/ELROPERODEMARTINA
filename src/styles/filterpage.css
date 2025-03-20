@@ -1,11 +1,11 @@
 .page-container {
-    position: fixed;
     display: flex;
     flex-direction: column;
     border: 1px rgba(0, 0, 0, 0.096) solid;
     border-radius: 20px;
     padding: 20px;
     gap: 10px;
+    width: 200px;
 }
 
 .checkbox-label {

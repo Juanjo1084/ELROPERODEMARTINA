@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import HomeProducts from '../components/homeproducts.jsx'
+import Carousel from '../components/carousel.jsx'
 import '../styles/home.css'
 
 export default function Home() {
@@ -30,21 +31,10 @@ export default function Home() {
       <div className="home">
       <div className="home-main">
           <h2>Categorías</h2>
-          <div className="home-products">
-            <HomeProducts productTitle='Jeans' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/4100732-483-725?v=638667348051500000&width=483&height=725&aspect=true" />
-            <HomeProducts productTitle='Gabanes' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/4247616-483-725?v=638744269622130000&width=483&height=725&aspect=true" />
-            <HomeProducts productTitle='Blusas' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/3728407-483-725?v=638531704850170000&width=483&height=725&aspect=true" />
-            <HomeProducts productTitle='Zapatillas' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" />
-          </div>
-          <div className="home-products">
-            <HomeProducts productTitle='Jeans' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/4100732-483-725?v=638667348051500000&width=483&height=725&aspect=true" />
-            <HomeProducts productTitle='Gabanes' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/4247616-483-725?v=638744269622130000&width=483&height=725&aspect=true" />
-            <HomeProducts productTitle='Blusas' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/3728407-483-725?v=638531704850170000&width=483&height=725&aspect=true" />
-            <HomeProducts productTitle='Zapatillas' productImage="https://hmcolombia.vtexassets.com/arquivos/ids/3873195-483-725?v=638585284597570000&width=483&height=725&aspect=true" />
-          </div>
+          <Carousel />
           <h2>¡Descubre nuestra colección y encuentra tu estilo ideal!</h2>
           <h2>Haz clic en el botón a continuación y explora todos nuestros productos.</h2>
-          <button className="btn-products"  onClick={() => {window.scrollTo(0, 0); navigate("/products");}}>Vamos de Compras</button>
+          <button className="btn-products"  onClick={() => {window.scrollTo(0, 0); navigate("/products");}}><i className="fa-solid fa-bag-shopping"></i> Vamos de Compras <i className="fa-solid fa-bag-shopping"></i></button>
       </div>  
       </div>
     </>

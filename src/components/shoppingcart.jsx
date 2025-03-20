@@ -7,12 +7,10 @@ export default function ShoppingCart() {
     const { cart, removeFromCart } = useCart();
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
-    const cartRef = useRef(null); // Referencia al carrito
+    const cartRef = useRef(null);
 
-    // Calcular el precio total del carrito
     const priceTotal = cart.reduce((total, item) => total + item.price, 0);
 
-    // Cerrar el carrito cuando se haga clic fuera de él
     useEffect(() => {
         function handleClickOutside(event) {
             if (cartRef.current && !cartRef.current.contains(event.target)) {
@@ -64,7 +62,6 @@ export default function ShoppingCart() {
                                 <p>Total de tu compra: </p>
                                 <h2>${priceTotal.toFixed(0)}</h2>
                             </div>
-                            {/* Cerrar el carrito cuando se haga clic en "Ir a pagar" */}
                             <button className="buy-btn" onClick={() => {
                                 setIsOpen(false);
                                 navigate("/checkout");
