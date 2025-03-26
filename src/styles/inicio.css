@@ -1,9 +1,13 @@
 .inicio {
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-moda_23-2150881559.jpg?t=st=1743023030~exp=1743026630~hmac=f6faf8df075e3016374d1aa3b16b34d0704b3dff0243c70c7469bd3cf742747f&w=996);
+    background-position: center;
+    image-rendering: crisp-edges;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}   
+    width: 100%;
+}  
 
 .inicio-main {
     display: flex;
@@ -12,7 +16,6 @@
 }
 
 .inicio-main img {
-    z-index: -1000;
     width: 300px;
 }
 
@@ -36,17 +39,16 @@
     font-size: 20px;
     color: white;
     border: none;
-    background-color: rgb(255, 93, 93);
+    background-color: rgb(217, 150, 150);
     cursor: pointer;
-    transition: ease-in-out 0.3s;
     padding: 10px 20px;
     font-size: 20px;
     border-radius: 10px;
 }
 
 .inicio-main button:hover {
-    background-color: rgb(255, 0, 0);
-    transform: scale(1.05);}
+    background-color: rgb(139, 108, 108);
+}
 
 .categories-grid {
     display: flex;

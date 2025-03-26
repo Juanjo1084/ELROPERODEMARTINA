@@ -19,7 +19,7 @@ useEffect(() => {
         <section className='inicio'>
             <div className="inicio-main">
                 <motion.img
-                    src="https://www.angelsdisplay.com/wp-content/uploads/2023/07/DSC05978.png.webp"
+                    src="https://i.postimg.cc/vmyD5bZg/10449207.png"
                     alt=""
                     className="inicio-maniqui"
                     initial={{ x: "100%", opacity: 0 }}  // Empieza fuera de la pantalla a la derecha
@@ -85,28 +85,28 @@ useEffect(() => {
                             animate={showText ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5, delay: 2.8 }}
                         >
-                            Envíos rápidos y seguros 🚀
+                            Envíos rápidos y seguros 
                         </motion.li>
                         <motion.li
                             initial={{ opacity: 0, x: -20 }}
                             animate={showText ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5, delay: 3 }}
                         >
-                            Pagos 100% protegidos 💳
+                            Pagos 100% protegidos 
                         </motion.li>
                         <motion.li
                             initial={{ opacity: 0, x: -20 }}
                             animate={showText ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5, delay: 3.2 }}
                         >
-                            Devoluciones fáciles 🔄
+                            Devoluciones fáciles 
                         </motion.li>
                         <motion.li
                             initial={{ opacity: 0, x: -20 }}
                             animate={showText ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5, delay: 3.4 }}
                         >
-                            Atención personalizada 📞
+                            Atención personalizada 
                         </motion.li>
                     </motion.ul>
 

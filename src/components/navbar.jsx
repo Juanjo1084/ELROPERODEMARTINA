@@ -28,7 +28,7 @@ const [isScrolled, setIsScrolled] = useState(false);
         <>
         <div>
             <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-                <button onClick={() => navigate("/sobrenosotros")}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
+                <button onClick={() => navigate("/")}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
                 <h1>EL ROPERO DE MARTINA</h1>
                 <div className="buttons-navbar">
                     {/* <Search />
