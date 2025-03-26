@@ -10,3 +10,80 @@
     align-items: center;
     gap: 20px;
 }
+
+.inicio-main img {
+    z-index: -1000;
+    width: 300px;
+}
+
+.inicio-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.inicio-main h1 {
+    color: rgb(215, 116, 116);
+    font-size: 30px;
+}
+
+.inicio-main h2 {
+    color: rgb(87, 65, 65);
+}
+
+.inicio-main button {
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: rgb(255, 93, 93);
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.inicio-main button:hover {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.05);}
+
+.categories-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.categories-grid img {
+    width: 70px;
+}
+
+.benefits-section {
+    text-align: center;
+}
+
+.benefits-section li::before {
+    content: "✅";
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+@media(max-width:991px){
+    .inicio {
+        margin: 50px 0 50px 0;
+        height: 100%;
+    }
+    .inicio-main {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .inicio-main img {
+        width: 200px;
+    }
+
+    .categories-grid img{
+        width: 50px;
+    }
+}
+

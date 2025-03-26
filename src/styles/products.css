@@ -166,6 +166,10 @@
     .products ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    .products img {
+        width: 220px;
+        height: 280px;
+    }
 }
 
 @media(max-width:1280px) {
