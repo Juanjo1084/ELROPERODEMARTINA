@@ -1,6 +1,8 @@
 import '../styles/footer.css'
+import {Link} from 'react-router-dom'
 
 export default function Footer(){
+
     return(
         <div className="footer-container">
             <div className="footer">
@@ -12,17 +14,17 @@ export default function Footer(){
                     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
                 <div className='footer-info'>
-                    <div className='footer-help'>
+                    <div className='footer-about'>
                         <h3>AYUDA</h3>
                         <p>Envíos</p>
                     </div>
                     <div className='footer-about'>
                         <h3>SOBRE LA TIENDA</h3>
-                        <p>Mercancias</p>
+                        <Link className='links' onClick={() => window.scrollTo(0, 0)} to="/sobrenosotros">Sobre Nosotros</Link>
                         <p>Direccion Calle 16</p>
                         <p>Sibundoy Putumayo</p>
                     </div>
-                    <div className='footer-contact'>
+                    <div className='footer-about'>
                         <h3>CONTACTO</h3>
                         <p>3143887170</p>
 

@@ -38,6 +38,22 @@
     gap: 30px;
 }
 
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links{
+    color: white;
+    transition: ease-in-out 0.1s;
+    text-decoration: underline;
+}
+
+.links:hover {
+    color: red;
+}
+
 @media(max-width:991px){
     .footer {
         text-align: center;

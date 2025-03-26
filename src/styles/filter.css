@@ -4,7 +4,7 @@
     padding: 10px 20px;
     top: 47px;
     position: relative;
-    opacity: 0;
+    width: 100%;
 }
 
 .filter button {
@@ -14,6 +14,7 @@
     background-color: rgba(255, 255, 255, 0.541);
     backdrop-filter: blur(10px);
     border-radius: 5px;
+    display: none;
 }
 
 .filter button:hover {
@@ -22,6 +23,24 @@
     transition: ease-in-out 500ms;
 }
 
+.marquee-text {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 16px;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+
 .filter-pages {
     display: flex;
     gap: 20px;
@@ -29,7 +48,15 @@
 
 @media(max-width:991px){
     .filter {
-        opacity: 1;
+        width: 80%;
+    }
+
+    .filter button {
+        display:inline;
+    }
+
+    .marquee-text {
+        display: none;
     }
     
     .filter-pages {

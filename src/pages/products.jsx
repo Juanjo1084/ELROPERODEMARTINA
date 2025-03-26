@@ -12,12 +12,13 @@ export default function Products() {
   const filteredProducts = filterProducts(initialProducts);
 
   return (
+    <>
+        <Filter />
     <div className="products-container">
       <div className='products-filter'>
         <FilterPage />
       </div>
       <div className='products-main'>
-        <Filter />
         <main className="products">
           {filteredProducts.length === 0 ? (
             <div className="no-products">
@@ -57,5 +58,6 @@ export default function Products() {
         </main>
       </div>
     </div>
+    </>
   );
 }

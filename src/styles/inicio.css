@@ -1,0 +1,12 @@
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}   
+
+.inicio-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
