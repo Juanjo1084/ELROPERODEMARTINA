@@ -48,11 +48,12 @@
 
 @media(max-width:991px){
     .filter {
-        width: 80%;
+        width: 90%;
     }
 
     .filter button {
         display:inline;
+        color: var(--text-dark-1);
     }
 
     .marquee-text {
