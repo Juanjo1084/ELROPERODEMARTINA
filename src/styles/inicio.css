@@ -103,8 +103,9 @@
     .inicio {
         margin-top: 10px;
         height: 100%;
-        background-attachment: scroll;
-        background-size: 500% 100%;
+        background: none;
+        
+
     }
     .inicio-main {
         flex-direction: column;
