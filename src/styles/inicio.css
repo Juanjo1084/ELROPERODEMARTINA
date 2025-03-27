@@ -2,7 +2,8 @@
     background-image: url(https://img.freepik.com/vector-gratis/fondo-garabato-abstracto-dibujado-mano_23-2149331182.jpg?t=st=1743023786~exp=1743027386~hmac=961157767668b6338323bd7c9ab376cb6ad7e58a5046dc5bd31ed01af3d17328&w=996);
     background-position: center;
     image-rendering: crisp-edges;
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
@@ -100,7 +101,7 @@
 
 @media(max-width:991px){
     .inicio {
-        margin: 50px 0 50px 0;
+        margin-top: 10px;
         height: 100%;
     }
     .inicio-main {

@@ -16,9 +16,9 @@ useEffect(() => {
     const isFirstVisit = sessionStorage.getItem("firstVisit") === null;
 
     if (isFirstVisit) {
-        setTimeout(() => setShowImage(true), 5000);
-        setTimeout(() => setShowText(true), 5500);
-        setTimeout(() => setShowButton(true), 9000);
+        setTimeout(() => setShowImage(true), 3000);
+        setTimeout(() => setShowText(true), 3500);
+        setTimeout(() => setShowButton(true), 7000);
 
         sessionStorage.setItem("firstVisit", "false");
     } else {
