@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import HomeProducts from '../components/homeproducts.jsx'
 import Carousel from '../components/carousel.jsx'
+import { usePageTransition } from "../context/pagetransitioncontext.jsx";
 import '../styles/home.css'
 
 export default function Home() {
-  const navigate = useNavigate();
+const navigate = useNavigate();
+const { startTransition } = usePageTransition();
 
   return (
     <>
@@ -34,7 +36,7 @@ export default function Home() {
           <Carousel />
           <h2>¡Descubre nuestra colección y encuentra tu estilo ideal!</h2>
           <h2>Haz clic en el botón a continuación y explora todos nuestros productos.</h2>
-          <button className="btn-products"  onClick={() => {window.scrollTo(0, 0); navigate("/products");}}><i className="fa-solid fa-bag-shopping"></i> Vamos de Compras <i className="fa-solid fa-bag-shopping"></i></button>
+          <button className="btn-products"  onClick={() => startTransition(() => {window.scrollTo(0, 0); navigate("/products")})}><i className="fa-solid fa-bag-shopping"></i> Vamos de Compras <i className="fa-solid fa-bag-shopping"></i></button>
       </div>  
       </div>
     </>
