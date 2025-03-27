@@ -2,12 +2,14 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/shoppingcart.css";
 import { useCart } from "../context/cartcontext.jsx";
+import { usePageTransition } from "../context/pagetransitioncontext.jsx";
 
 export default function ShoppingCart() {
     const { cart, removeFromCart } = useCart();
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
     const cartRef = useRef(null);
+    const { startTransition } = usePageTransition();
 
     const priceTotal = cart.reduce((total, item) => total + item.price, 0);
 
@@ -62,10 +64,9 @@ export default function ShoppingCart() {
                                 <p>Total de tu compra: </p>
                                 <h2>${priceTotal.toFixed(0)}</h2>
                             </div>
-                            <button className="buy-btn" onClick={() => {
-                                setIsOpen(false);
-                                navigate("/checkout");
-                            }}>Ir a pagar</button>
+                            <button className="buy-btn" onClick={() => startTransition(() => {setIsOpen(false); navigate("/checkout")})}>
+                            Ir a pagar
+                            </button>
                         </div>
                     )}
                 </div>

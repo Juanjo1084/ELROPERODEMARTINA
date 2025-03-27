@@ -1,7 +1,10 @@
 import '../styles/footer.css'
-import {Link} from 'react-router-dom'
+import { usePageTransition } from '../context/pagetransitioncontext'
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer(){
+const { startTransition } = usePageTransition();
+const navigate = useNavigate();
 
     return(
         <div className="footer-container">
@@ -20,7 +23,7 @@ export default function Footer(){
                     </div>
                     <div className='footer-about'>
                         <h3>SOBRE LA TIENDA</h3>
-                        <Link className='links' onClick={() => window.scrollTo(0, 0)} to="/sobrenosotros">Sobre Nosotros</Link>
+                        <button className='links' onClick={() => startTransition(() => {window.scrollTo(0, 0); navigate("/sobrenosotros")})}>Sobre Nosotros</button>
                         <p>Direccion Calle 16</p>
                         <p>Sibundoy Putumayo</p>
                     </div>

@@ -8,27 +8,30 @@ import Details from './components/details.jsx'
 import Home from './pages/home.jsx'
 import Checkout from './components/checkout.jsx';
 import Inicio from './pages/inicio.jsx';
+import { PageTransitionProvider } from './context/pagetransitioncontext.jsx'
+import PageTransition from './components/pagetransition.jsx';
 
 function App() {
 
   return (
-    <>
-    <div className='app'>
-      <LandingPage />
-      <Header />
-      <div className='app-main'>
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/sobrenosotros" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path='/details/:id' element={<Details />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Routes>
+    <PageTransitionProvider>
+      <PageTransition />
+      <div className='app'>
+        <LandingPage />
+        <Header />
+        <div className='app-main'>
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/sobrenosotros" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path='/details/:id' element={<Details />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+        </div>
+        <a className='button-whats' href="https://wa.me/573143887170"><i class="fa-brands fa-square-whatsapp"></i></a>
+        <Footer />
       </div>
-      <a className='button-whats' href="https://wa.me/573143887170"><i class="fa-brands fa-square-whatsapp"></i></a>
-      <Footer />
-    </div>
-    </>
+    </PageTransitionProvider>
   )
 }
 

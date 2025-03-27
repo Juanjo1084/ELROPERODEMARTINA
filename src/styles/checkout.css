@@ -74,11 +74,13 @@
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
+    background-color: rgb(255, 151, 151);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .checkout-button button:hover {
-    background: red;
+    background: rgb(255, 104, 104);
     transition: ease-in-out 0.3s;
     transform: scale(1.05);
 }

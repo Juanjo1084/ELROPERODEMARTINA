@@ -1,13 +1,13 @@
-import Search from './search.jsx'
-import ShoppingCart from './shoppingcart.jsx'
-import Favorite from './favorite.jsx'
-import { useNavigate} from "react-router-dom";
 import '../styles/navbar.css'
+import ShoppingCart from './shoppingcart.jsx'
+import { useNavigate} from "react-router-dom";
 import { useState, useEffect } from "react";
+import { usePageTransition } from '../context/pagetransitioncontext.jsx';
 
 export default function Navbar() {
 const navigate = useNavigate();
 const [isScrolled, setIsScrolled] = useState(false);
+const { startTransition } = usePageTransition();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +28,9 @@ const [isScrolled, setIsScrolled] = useState(false);
         <>
         <div>
             <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-                <button onClick={() => navigate("/")}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
+                <button onClick={() => startTransition(() => {window.scrollTo(0, 0); navigate("/")})}><img src="https://i.postimg.cc/yNHn47WZ/logo-black.png" alt="logo" /></button>
                 <h1>EL ROPERO DE MARTINA</h1>
                 <div className="buttons-navbar">
-                    {/* <Search />
-                    <Favorite /> */}
                     <ShoppingCart />
                 </div>
             </div>

@@ -1,18 +1,31 @@
 import '../styles/inicio.css'
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
+import { usePageTransition } from "../context/pagetransitioncontext.jsx";
 
 export default function Inicio() {
 const navigate = useNavigate();
+const { startTransition } = usePageTransition();
+
 const [showImage, setShowImage] = useState(false);
 const [showText, setShowText] = useState(false);
 const [showButton, setShowButton] = useState(false);
 
 useEffect(() => {
-    setTimeout(() => setShowImage(true), 5000);  // Imagen aparece después de 5s
-    setTimeout(() => setShowText(true), 5500);   // Texto comienza a escribirse después de 5.5s
-    setTimeout(() => setShowButton(true), 9000); // Botón aparece después de 7s
+    const isFirstVisit = sessionStorage.getItem("firstVisit") === null;
+
+    if (isFirstVisit) {
+        setTimeout(() => setShowImage(true), 5000);
+        setTimeout(() => setShowText(true), 5500);
+        setTimeout(() => setShowButton(true), 9000);
+
+        sessionStorage.setItem("firstVisit", "false");
+    } else {
+        setTimeout(() => setShowImage(true), 600);
+        setTimeout(() => setShowText(true), 1100);
+        setTimeout(() => setShowButton(true), 2000);
+    }
 }, []);
 
     return(
@@ -111,7 +124,7 @@ useEffect(() => {
                     </motion.ul>
 
                     <motion.button
-                        onClick={() => { window.scrollTo(0, 0); navigate("/products"); }}
+                        onClick={() => startTransition(() => {window.scrollTo(0, 0); navigate("/products")})}
                         initial={{ x: "100%", opacity: 0 }}
                         animate={showButton ? { x: 0, opacity: 1 } : {}}
                         transition={{ duration: 1, ease: "easeOut" }}

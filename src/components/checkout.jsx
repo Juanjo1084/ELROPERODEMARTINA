@@ -1,10 +1,12 @@
 import { useCart } from "../context/cartcontext.jsx";
 import { useNavigate } from "react-router-dom";
+import { usePageTransition } from "../context/pagetransitioncontext.jsx";
 import "../styles/checkout.css";
 
 export default function Checkout() {
-    const { cart } = useCart();
-    const navigate = useNavigate();
+const { cart } = useCart();
+const navigate = useNavigate();
+const { startTransition } = usePageTransition();
 
     // Calcular el descuento según la cantidad de productos
     const totalItems = cart.length;
@@ -80,7 +82,7 @@ export default function Checkout() {
 
                         <div className="checkout-button">
                             <button className="pay-button">Proceder al pago</button>
-                            <button className="back-button" onClick={() => navigate(-1)}>Volver</button>
+                            <button className="back-button" onClick={() => startTransition(() => {window.scrollTo(0, 0); navigate("/products")})}>Volver</button>
                         </div>
                     </div>
                 )}
